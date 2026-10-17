@@ -1,5 +1,5 @@
 # Multi-Stage Dockerfile for Serverless Backend (Scale-to-Zero Optimized)
-FROM node:20-alpine AS builder
+FROM node:24-alpine AS builder
 
 WORKDIR /app
 
@@ -12,7 +12,7 @@ RUN npm --workspace=@repo/types run build
 RUN npm --workspace=@repo/backend run build
 
 # Stage 2: Production Minimal Image
-FROM node:20-alpine AS runner
+FROM node:24-alpine AS runner
 
 WORKDIR /app
 

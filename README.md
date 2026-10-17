@@ -108,13 +108,9 @@ gcp-serverless-ecommerce/
 │   ├── tsconfig/                     # Standardized TypeScript compiler configurations
 │   └── types/                        # Shared domain contracts (Orders, Products, Cart)
 │
-├── scripts/
-│   ├── list-alerts.js                # GitHub Code Scanning alert validator
-│   └── verify-envs.js                # Multi-environment health & smoke test runner
-│
 ├── .trivyignore                      # Trivy vulnerability ignore definitions
 ├── .semgrepignore                    # Semgrep static analysis exclusion rules
-├── package.json                      # Root workspace manifest with overrides
+├── package.json                      # Root workspace manifest
 ├── turbo.json                        # Turborepo task pipeline configuration
 └── README.md
 ```

@@ -22,7 +22,7 @@ flowchart TD
         DevCode --> Trigger{"Git Push / PR\n(main, production, staging)"}
 
         subgraph CIPipeline ["1. CI Validation (ci.yml)"]
-            Trigger --> NodeSetup["Setup Node.js 20 & npm ci"]
+            Trigger --> NodeSetup["Setup Node.js 24 & npm ci"]
             NodeSetup --> TurboBuild["Turborepo Monorepo Build\n(TypeScript & Next.js 82 Pages)"]
         end
 
