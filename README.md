@@ -2,8 +2,6 @@
 
 > [!IMPORTANT]
 > **This project is archived and no longer maintained.** The repository is read-only and is kept as a reference architecture. No further updates, security patches, or support will be provided.
->
-> **Known limitation — review before deploying:** The Cloud Tasks worker endpoints (`/api/tasks/invoice-pdf`, `/api/tasks/send-email`) decide whether a request comes from Cloud Tasks by checking the `x-cloudtasks-*` request headers ([`tasks.ts`](apps/backend/src/api/routes/tasks.ts)). Any client can set these headers on Cloud Run, so the check does not authenticate the caller. Rate limiting reduces abuse, but it does not close the gap. Before using this code in production, verify the OIDC token that Cloud Tasks attaches to each request, or deploy the workers as a separate Cloud Run service that requires authentication.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Infrastructure: Google Cloud](https://img.shields.io/badge/Cloud-Google%20Cloud%20Platform-4285F4?logo=google-cloud&logoColor=white)](https://cloud.google.com/)
