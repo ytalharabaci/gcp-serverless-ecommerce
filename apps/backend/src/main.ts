@@ -13,6 +13,10 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 9000;
 
+// Cloud Run sits behind a single Google Front End hop; trust it so req.ip
+// (used by rate limiting) reflects the real client instead of the proxy.
+app.set("trust proxy", 1);
+
 const allowedOrigins = [
   "http://localhost:3000",
   "http://127.0.0.1:3000",
