@@ -7,8 +7,7 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "clean": "turbo run clean",
-    "security:audit": "npm audit --omit=dev",
-    "verify:envs": "node scripts/verify-envs.js"
+    "security:audit": "npm audit --omit=dev"
   },
   "workspaces": [
     "apps/*",
